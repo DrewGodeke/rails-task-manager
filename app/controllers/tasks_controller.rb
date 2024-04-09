@@ -1,4 +1,3 @@
-# app/controllers/tasks_controller.rb
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
@@ -6,5 +5,25 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+  end
+
+  def new
+    @task = Task.new
+  end
+
+  def create
+    @task = Task.new(task_params)
+
+    if @task.save
+      redirect_to @task
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:title, :details, :completed)
   end
 end
