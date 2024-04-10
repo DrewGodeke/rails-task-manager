@@ -3,16 +3,24 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li>
-          <!-- Add Font Awesome checkbox icons -->
+    <li class="task-item">
+      <!-- Checkbox -->
       <% if task.completed %>
         <i class="fas fa-check-square"></i> <!-- Checked checkbox -->
       <% else %>
         <i class="far fa-square"></i> <!-- Unchecked checkbox -->
       <% end %>
 
-      <%= link_to task.title, task_path(task) %>
-      <%= button_to "Delete", task, method: :delete, data: { confirm: "Are you sure?" } %>
+      <!-- Task Content Container -->
+      <div class="task-content">
+        <!-- Task Title -->
+        <%= link_to task.title, task_path(task) %>
+
+        <!-- Delete Button -->
+        <div class="delete-button-container">
+          <%= button_to "Delete", task, method: :delete, data: { confirm: "Are you sure?" }, class: "delete-button" %>
+        </div>
+      </div>
     </li>
   <% end %>
 </ul>

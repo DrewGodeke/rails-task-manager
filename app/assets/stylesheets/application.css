@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+/* Reset default browser styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+}
+
+.task-content {
+  flex-grow: 1;
+}
+
+.delete-button-container {
+  margin-top: 5px;
+}
+
+/* Delete button */
+.delete-button {
+  padding: 4px 6px;
+  font-size: 10px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
