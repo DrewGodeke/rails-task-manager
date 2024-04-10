@@ -1,7 +1,8 @@
 <!-- app/views/tasks/show.html.erb -->
-<h1><%= @task.title %></h1>
-<p><%= @task.details %></p>
-<p>Completed: <%= @task.completed ? 'Yes' : 'No' %></p>
-
-<%= link_to "Edit Task", edit_task_path(@task) %>
-<%= link_to "Back to List", tasks_path %>
+<div class="show-container">
+  <h1 class="show-heading"><%= @task.title %></h1>
+  <p class="show-content"><%= @task.details %></p>
+  <p class="show-content">Completed: <%= @task.completed ? 'Yes' : 'No' %></p>
+  <%= link_to "Edit Task", edit_task_path(@task), class: "form-submit" %>
+  <%= link_to "Back to List", tasks_path, class: "back-button" %>
+</div>

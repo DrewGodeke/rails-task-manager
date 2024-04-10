@@ -14,16 +14,15 @@
  *= require_self
  */
 /* Reset default browser styles */
-body, h1, h2, h3, p, ul, li {
+/* Reset default browser styles */
+body, h1, ul, li {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
 }
 
 .container {
@@ -33,7 +32,7 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
@@ -45,32 +44,103 @@ li {
   margin-bottom: 10px;
 }
 
+/* Task item */
 .task-item {
   display: flex;
   align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.task-content {
+.task-checkbox {
+  margin-right: 15px;
+}
+
+.task-title {
   flex-grow: 1;
+  font-size: 18px;
 }
 
-.delete-button-container {
-  margin-top: 5px;
-}
-
-/* Delete button */
 .delete-button {
-  padding: 4px 6px;
-  font-size: 10px;
-  background-color: red;
+  padding: 8px 16px;
+  background-color: #ff5a5f;
   color: #fff;
   border: none;
-  border-radius: 2px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 10px;
 }
 
 .delete-button:hover {
-  background-color: #c82333;
+  background-color: #e11a1e;
+}
+
+/* Styles for forms and show page */
+.form-container,
+.show-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading,
+.show-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-actions,
+.show-actions {
+  text-align: center;
+}
+
+.form-submit {
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
 }
